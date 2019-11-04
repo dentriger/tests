@@ -11,4 +11,9 @@ class StudentUser extends User
         $this->fillable[] = 'group';
         parent::__construct($attributes);
     }
+
+    public function testResults()
+    {
+        return $this->hasMany('App\TestResult');
+    }
 }

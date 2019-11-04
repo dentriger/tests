@@ -22,7 +22,7 @@ abstract class User extends Model implements AuthenticatableContract, Authorizab
     ];
 
     protected $hidden = [
-        'tokenId'
+        'tokenId', 'created_at', 'updated_at'
     ];
 
     public function getAuthToken()

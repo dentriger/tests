@@ -17,8 +17,10 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api/v1'], function ($router) {
     $router->post('/login', 'AuthController@login');
+    $router->get('/results', 'TestController@getResults');
 
     $router->group(['middleware' => 'auth'], function ($router) {
         $router->get('/user', 'AuthController@getUser');
+        $router->post('/publishTest', 'TestController@publishTest');
     });
 });
