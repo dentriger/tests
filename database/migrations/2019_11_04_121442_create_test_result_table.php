@@ -15,7 +15,6 @@ class CreateTestResultTable extends Migration
     {
         Schema::create('test_results', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->integer('userId')->unsigned();
             $table->json('results');
             $table->timestamps();
